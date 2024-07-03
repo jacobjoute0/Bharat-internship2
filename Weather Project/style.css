@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("demo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 1.2rem;
+}
+
+.card {
+    background: hsla(0, 0%, 0%, 0.816);
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    /* border: 2px solid red; */
+}
+
+.search-bar {
+    border-radius: 8px;
+    height: 30px;
+    width: 80%;
+    background-color: hsl(0deg 1.78% 28.63% / 64%);
+    border:none;
+    padding: 10px 12px;
+    margin: 5px 8px;
+    outline: none;
+    color: white;
+    font-size: 25px;
+    font-family: inherit;
+}
+
+.search-bar::before {
+    content: "&nbsp;";
+    border: 2px solid red;
+}
+
+button {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(26, 32, 30);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: hsl(0deg 1.78% 28.63% / 64%);
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 15px;
+    position: relative;
+}
+
+.weather.loading::after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
